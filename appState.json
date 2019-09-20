@@ -1,0 +1,111 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "9a915220-294c-45e4-976e-d534485075e0": {
+        "id": "9a915220-294c-45e4-976e-d534485075e0",
+        "parent": null,
+        "name": "sqstrigcrash",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "7e2860c7-a433-4cbe-a711-39a66c369545"
+        ],
+        "isRemovable": false,
+        "filePath": "sqstrigcrash"
+      },
+      "7e2860c7-a433-4cbe-a711-39a66c369545": {
+        "id": "7e2860c7-a433-4cbe-a711-39a66c369545",
+        "parent": "9a915220-294c-45e4-976e-d534485075e0",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "sqstrigcrash/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 30,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "sqskk",
+            "config": {
+              "BatchSize": "10"
+            }
+          }
+        ]
+      }
+    },
+    "rootNode": "9a915220-294c-45e4-976e-d534485075e0",
+    "openFiles": [
+      "7e2860c7-a433-4cbe-a711-39a66c369545"
+    ],
+    "currentFileId": "7e2860c7-a433-4cbe-a711-39a66c369545",
+    "resources": {
+      "sqskk": {
+        "name": "sqskk",
+        "type": "SQS",
+        "config": {
+          "mode": 0,
+          "existing": false,
+          "name": "kk",
+          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/kk",
+          "selectedRegion": "us-east-1",
+          "deliveryDelay": 0,
+          "deliveryDelayUnit": "seconds",
+          "useRedrivePolicy": false,
+          "useSSE": false,
+          "kmsCustomerMasterKey": "default",
+          "accountId": "318300609668",
+          "dataKeyReusePeriod": 5,
+          "queueType": "standardQueue",
+          "defaultVisibilityTimeout": 30,
+          "defaultVisibilityTimeoutUnit": "seconds",
+          "messageRetentionPeriod": 4,
+          "messageRetentionPeriodUnit": "days",
+          "maximumMessageSize": 256,
+          "receiveMessageWaitTime": 0,
+          "deadLetterQueueName": "",
+          "contentBasedDeduplication": false
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "sqstrigcrash",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1568975243570
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "sqstrigcrash",
+      "url": "https://github.com/Kumudikatest/sqstrigcrash"
+    }
+  }
+}
