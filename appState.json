@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "sqstrigcrash/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -32,9 +32,11 @@
         },
         "triggers": [
           {
-            "resourceName": "sqskk",
+            "resourceName": "s3kkk",
             "config": {
-              "BatchSize": "10"
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
             }
           }
         ]
@@ -46,31 +48,15 @@
     ],
     "currentFileId": "7e2860c7-a433-4cbe-a711-39a66c369545",
     "resources": {
-      "sqskk": {
-        "name": "sqskk",
-        "type": "SQS",
+      "s3kkk": {
+        "name": "s3kkk",
+        "type": "S3",
         "config": {
           "mode": 0,
-          "existing": false,
-          "name": "kk",
-          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/kk",
-          "selectedRegion": "us-east-1",
-          "deliveryDelay": 0,
-          "deliveryDelayUnit": "seconds",
-          "useRedrivePolicy": false,
-          "useSSE": false,
-          "kmsCustomerMasterKey": "default",
-          "accountId": "318300609668",
-          "dataKeyReusePeriod": 5,
-          "queueType": "standardQueue",
-          "defaultVisibilityTimeout": 30,
-          "defaultVisibilityTimeoutUnit": "seconds",
-          "messageRetentionPeriod": 4,
-          "messageRetentionPeriodUnit": "days",
-          "maximumMessageSize": 256,
-          "receiveMessageWaitTime": 0,
-          "deadLetterQueueName": "",
-          "contentBasedDeduplication": false
+          "bucket": {
+            "region": "us-east-1",
+            "name": "kkk"
+          }
         }
       }
     },
@@ -99,7 +85,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568975463213
+    "lastSave": 1568975737149
   },
   "VCS_STATE": {
     "provider": "GitHub",
