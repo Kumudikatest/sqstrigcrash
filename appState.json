@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "sqstrigcrash/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n}",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -58,17 +58,17 @@
           "deliveryDelay": 0,
           "deliveryDelayUnit": "seconds",
           "useRedrivePolicy": false,
-          "useSSE": true,
+          "useSSE": false,
           "kmsCustomerMasterKey": "default",
           "accountId": "318300609668",
           "dataKeyReusePeriod": 5,
           "queueType": "standardQueue",
           "defaultVisibilityTimeout": 30,
           "defaultVisibilityTimeoutUnit": "seconds",
-          "messageRetentionPeriod": "5",
+          "messageRetentionPeriod": 4,
           "messageRetentionPeriodUnit": "days",
           "maximumMessageSize": 256,
-          "receiveMessageWaitTime": "4",
+          "receiveMessageWaitTime": 0,
           "deadLetterQueueName": "",
           "contentBasedDeduplication": false
         }
@@ -99,7 +99,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568975426270
+    "lastSave": 1568975463213
   },
   "VCS_STATE": {
     "provider": "GitHub",
