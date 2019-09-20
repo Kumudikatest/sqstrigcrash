@@ -32,11 +32,9 @@
         },
         "triggers": [
           {
-            "resourceName": "s3kkk",
+            "resourceName": "sqskk",
             "config": {
-              "type": "s3:ObjectCreated:*",
-              "keyPrefix": "",
-              "keySuffix": ""
+              "BatchSize": "10"
             }
           }
         ]
@@ -85,7 +83,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568975737149
+    "lastSave": 1568975784872
   },
   "VCS_STATE": {
     "provider": "GitHub",
